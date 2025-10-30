@@ -260,8 +260,6 @@ pytest --cov=app tests/
 
 ---
 
----
-
 ## 🐛 Known Issues
 
 - LLM model loading can be slow on first run
