@@ -4,7 +4,6 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-3.0+-green.svg)](https://flask.palletsprojects.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-success.svg)](https://github.com/chakri30/Shop-Smart-An-E-Commerce-Product-Recommender)
 
 **🚀 Hybrid Recommendation System with LLM-Powered Explanations**
