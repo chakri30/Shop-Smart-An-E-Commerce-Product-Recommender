@@ -1,0 +1,89 @@
+/* E-Commerce Recommender - Pro Styling */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+}
+
+.card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-warning {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-warning:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(245,87,108,0.3);
+}
+
+.rating {
+    color: #ffc107;
+}
+
+.explanation {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    font-style: italic;
+    color: #555;
+    margin-top: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 30px 0;
+    margin-top: 80px;
+}
+
+/* Page-specific small tweaks used by a few templates */
+.divider hr { border-top: 1px solid rgba(0,0,0,0.06); }
+
+/* Ensure cards used for auth forms have consistent look */
+.auth-hero { background: linear-gradient(135deg,#667eea 0%,#764ba2 100%); color: white; }
+.auth-hero .bi { opacity: 0.95; }
+
+/* Hide the hero column on small screens */
+@media (max-width: 767px) {
+    .auth-left { display: none !important; }
+}
+
+/* Small utility for product images used in main.html */
+.product-img { height:200px; object-fit:cover; }
+
+/* Explanation box reuse */
+.explanation-box { display:none; border-left:4px solid #667eea; font-size:0.95em; background:#f8f9fa; padding:12px; border-radius:6px; }

@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">
+            {% if query %}
+                Search Results for "<strong>{{ query }}</strong>"
+            {% else %}
+                Popular Products
+            {% endif %}
+        </h2>
+
+        <!-- Search form – keeps current query -->
+        <form class="d-flex" method="GET" action="{{ url_for('main') }}">
+            <input class="form-control me-2" type="search" name="q"
+                   placeholder="Search products..." value="{{ query or '' }}">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ product.image }}" class="card-img-top product-img"
+                     alt="{{ product.description }}">
+
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ product.description }}</h5>
+
+                    <!-- Rating + Button -->
+                    <div class="mt-auto">
+                        <div class="text-warning mb-2">5 stars</div>
+
+                        <button class="btn btn-sm btn-warning w-100 d-flex align-items-center justify-content-center"
+                                data-index="{{ loop.index0 }}"
+                                data-item="{{ product.description|e }}"
+                                data-user-id="{{ current_user.id }}"
+                                onclick="getExplanation(this)">
+                            <span class="me-1">Why Recommended?</span>
+                            <span class="spinner" style="display:none;">
+                                <span class="spinner-border spinner-border-sm" role="status"></span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Explanation container -->
+                    <div id="explanation-{{ loop.index0 }}" class="explanation-box mt-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if not products %}
+    <div class="text-center py-5">
+        <p class="text-muted">No products found. Try searching something else!</p>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+function getExplanation(btn) {
+    const userId  = btn.dataset.userId;
+    const index   = btn.dataset.index;
+    const item    = btn.dataset.item.trim();
+    const spinner = btn.querySelector('.spinner');
+    const text    = btn.querySelector('span:not(.spinner)');
+    const explEl  = document.getElementById('explanation-' + index);
+
+    // ---- UI: loading ----
+    btn.disabled = true;
+    text.style.display = 'none';
+    spinner.style.display = 'inline-block';
+
+    const url = `/api/recommendations/${userId}/${encodeURIComponent(item)}`;
+
+    fetch(url)
+        .then(r => {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.json();
+        })
+        .then(data => {
+            explEl.innerHTML = `<strong>LLM Explanation:</strong> ${data.explanation}`;
+            explEl.style.display = 'block';
+        })
+        .catch(() => {
+            explEl.innerHTML = '<span class="text-danger">Error generating explanation.</span>';
+            explEl.style.display = 'block';
+        })
+        .finally(() => {
+            btn.disabled = false;
+            text.style.display = 'inline';
+            spinner.style.display = 'none';
+        });
+}
+</script>
+{% endblock %}
