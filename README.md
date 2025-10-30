@@ -10,7 +10,7 @@
 
 *Intelligent product recommendations with personalized AI-generated insights*
 
-[🌐 Live Demo](#-live-demo) • [✨ Features](#-key-features) • [🛠️ Tech Stack](#-tech-stack) • [📦 Installation](#-installation) • [📚 API Documentation](#-api-documentation)
+ [✨ Features](#-key-features) • [🛠️ Tech Stack](#-tech-stack) • [📦 Installation](#-installation) • [📚 API Documentation](#-api-documentation)
 
 </div>
 
@@ -179,31 +179,9 @@ Shop-Smart-An-E-Commerce-Product-Recommender/
 ├── 📄 recommendations_code.ipynb # ML experimentation notebook
 ├── 📄 Online Retail.csv      # Sample dataset
 ├── 📄 Online Retail.xlsx     # Excel format dataset
-├── 📄 Details Steps and all.docx # Documentation
 ├── 📄 .gitignore            # Git ignore rules
 └── 📄 README.md             # This file
 ```
-
----
-
-## 🎨 Screenshots
-
-<div align="center">
-
-### Home Page
-![Home Page](screenshots/homepage.png)
-
-### Product Recommendations
-![Recommendations](screenshots/recommendations.png)
-
-### Mobile Responsive Design
-![Mobile](screenshots/mobile.png)
-
-*Screenshots will be added in future updates*
-
-</div>
-
----
 
 ## 🧠 How It Works
 
@@ -282,20 +260,6 @@ pytest --cov=app tests/
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Development Setup
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes
-4. Run tests: `pytest`
-5. Commit: `git commit -m 'Add amazing feature'`
-6. Push: `git push origin feature/amazing-feature`
-7. Open a Pull Request
-
 ---
 
 ## 🐛 Known Issues
@@ -307,27 +271,9 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 *See [Issues](https://github.com/chakri30/Shop-Smart-An-E-Commerce-Product-Recommender/issues) for more details*
 
 ---
-
-## 🔮 Roadmap
-
-- [ ] **Q1 2025**: Add collaborative filtering
-- [ ] **Q1 2025**: Implement real-time user tracking
-- [ ] **Q2 2025**: Add image-based recommendations
-- [ ] **Q2 2025**: Deploy to cloud platform
-- [ ] **Q3 2025**: Add mobile app
-- [ ] **Q3 2025**: Implement A/B testing framework
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 👥 Authors
 
-- **Chakri** - *Initial work* - [chakri30](https://github.com/chakri30)
+- **Chakri**  - [chakri30](https://github.com/chakri30)
 
 ---
 
@@ -345,8 +291,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
 
 [![GitHub Issues](https://img.shields.io/badge/Issues-Welcome-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/chakri30/Shop-Smart-An-E-Commerce-Product-Recommender/issues)
-[![Email](https://img.shields.io/badge/Email-Support-4B9AEC?style=for-the-badge&logo=gmail&logoColor=white)](mailto:support@example.com)
-[![Discord](https://img.shields.io/badge/Discord-Join-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/example)
+[![Email](https://img.shields.io/badge/Email-Support-4B9AEC?style=for-the-badge&logo=gmail&logoColor=white)](mailto:chakrichindiri2022@gmail.com)
+
 
 **⭐ Star this repo if you found it helpful! ⭐**
 
@@ -356,8 +302,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-*Made with ❤️ by MiniMax Agent*
 
-[⬆️ Back to Top](#-shop-smart---e-commerce-product-recommender)
+[⬆️ Back to Top](#-Shop-Smart-An-E-Commerce-Product-Recommender)
 
 </div>
